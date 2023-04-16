@@ -13,7 +13,7 @@ require (
 	github.com/rwxrob/json v0.8.0
 	github.com/rwxrob/to v0.12.1
 	github.com/spf13/viper v1.15.0
-	github.com/tr00datp00nar/fn v0.0.0-00010101000000-000000000000
+	github.com/tr00datp00nar/fn v0.1.0
 )
 
 require (
