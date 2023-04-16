@@ -1,11 +1,9 @@
 package animerecommender
 
 import (
-	"net/url"
-	"strings"
-
 	Z "github.com/rwxrob/bonzai/z"
 	"github.com/rwxrob/help"
+	"github.com/tr00datp00nar/fn"
 )
 
 var Cmd = &Z.Cmd{
@@ -21,14 +19,8 @@ var Cmd = &Z.Cmd{
 
 	Call: func(x *Z.Cmd, args ...string) error {
 		a := Z.ArgsOrIn(args)
-		query := rawUrlEncode(a)
+		query := fn.RawUrlEncode(a)
 		getRecommendation(query)
 		return nil
 	},
-}
-
-// rawUrlEncode takes any string and conactenates each word with "%20"
-// as the delimeter. Used when encoding a URL.
-func rawUrlEncode(str string) string {
-	return strings.Replace(url.QueryEscape(str), "+", "%20", -1)
 }
